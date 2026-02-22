@@ -1,0 +1,17 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    purpose: deployement-demo
+    project: roboshop
+    app: nginx
+spec:
+  selector:
+    purpose: deployement-demo
+    project: roboshop
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.targetPort }}
