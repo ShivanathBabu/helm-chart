@@ -1,5 +1,5 @@
 deployement:
   replicas: 4
-  imageVersion: latest
+  imageVersion: latest-alpine
 service:
   targetPort: 80
